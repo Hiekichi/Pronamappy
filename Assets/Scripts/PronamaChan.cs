@@ -61,8 +61,12 @@ public class PronamaChan : MonoBehaviour {
 			}
 
 			++step;
-			if (step >  15) {   
+			if (step >  16) {   
 				step = 0;
+				Vector3 v =  transform.position;
+				v.x = ((int)Mathf.Round(v.x / 16)) * 16;
+				v.y = ((int)Mathf.Round(v.y / 16)) * 16;
+				transform.position = v;
 			}
 		}
 	}
