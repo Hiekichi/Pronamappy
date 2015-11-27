@@ -40,8 +40,11 @@ public class PronamaChan : MonoBehaviour {
 		}
 		else { // WALK
 			//transform.Translate(dX * Time.deltaTime, dY * Time.deltaTime, 0);
-			transform.Translate(dX[direct] / 15.0f * 32.0f, dY[direct] / 15.0f * 32.0f, 0.0f);
-
+			//transform.Translate(dX[direct] / 15.0f * 32.0f, dY[direct] / 15.0f * 32.0f, 0.0f);
+			Vector3 vector =  transform.position;
+			vector.x += (int)dX[direct];
+			vector.y += (int)dY[direct];
+			transform.position = vector;
 
 			int walkIndex = (step % 8) / 4;
 			if (direct == 0) { //Right
