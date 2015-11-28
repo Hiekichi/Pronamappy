@@ -11,13 +11,13 @@ public class Rock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (counter > 30) {
-			Vector3 v = transform.position;
-			//v.x = ((int)Mathf.Round(v.x / 16)) * 16;
-			//v.y = ((int)Mathf.Round(v.y / 16)) * 16;
+		Vector3 v = transform.position;
+		if (counter % 20 == 0) {
 			v.x = ((int)Mathf.Round (v.x / 4)) * 4;
-			v.y = ((int)Mathf.Round (v.y / 4)) * 4;
 			transform.position = v;
+		}
+		else if (counter > 60) {
+			v.x = ((int)Mathf.Round (v.x / 16)) * 16;
 
 			counter = 0;
 		}
