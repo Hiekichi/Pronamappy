@@ -24,16 +24,18 @@ public class Rock : MonoBehaviour {
 		++counter;
 	}
 
-	public void Crash() {
-		Destroy (this.gameObject);
-	}
+	//public void Crash() {
+	//	Destroy (this.gameObject);
+	//}
 
-	/*
+
 	// 他のオブジェクトと衝突した時に呼び出される関数
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.name == "CrashBomb") { // ぶつかった相手がCrashBombなら
+		Debug.Log (coll.gameObject.name);
+		if (coll.gameObject.name == "CrashBomb(Clone)") { // ぶつかった相手がCrashBombなら
+			coll.gameObject.SendMessage("DeleteThis");
 			Destroy (this.gameObject);  // 自分自身を消滅させる
 		}
 	}
-	*/
+
 }

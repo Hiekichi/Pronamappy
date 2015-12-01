@@ -12,6 +12,7 @@ public class PronamaChan : MonoBehaviour {
 	public Sprite[] walkL;
 	public Sprite[] walkU;
 	public Sprite[] Rock;
+	public Transform crashBomb;
 
 	// Use this for initialization
 	void Start () {
@@ -68,6 +69,13 @@ public class PronamaChan : MonoBehaviour {
 				v.y = ((int)Mathf.Round(v.y / 16)) * 16;
 				transform.position = v;
 			}
+		}
+
+		if (Input.GetKey(KeyCode.Space)) {
+			Vector3 bombPosition =  transform.position;
+			bombPosition.x += ((int)dX[direct] * 32);
+			bombPosition.y += ((int)dY[direct] * 32);
+			Instantiate(crashBomb,bombPosition,transform.rotation);
 		}
 	}
 }

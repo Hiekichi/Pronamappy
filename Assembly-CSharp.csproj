@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CrashBomb.cs" />
+     <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\PronamaChan.cs" />
      <Compile Include="Assets\Scripts\Rock.cs" />
  <Reference Include="UnityEngine.UI">
