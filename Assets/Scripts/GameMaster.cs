@@ -10,12 +10,6 @@ public class GameMaster : MonoBehaviour {
 		StageNumber = 1;
 
 		GameMain ();
-/*
-		Vector3 pos1 = new Vector3 ();
-		pos1.x = -96;
-		pos1.y = -0;
-		Instantiate (RockTr, pos1, transform.rotation);  
-*/
 	}
 	
 	// Update is called once per frame
@@ -37,8 +31,8 @@ public class GameMaster : MonoBehaviour {
 		Vector3 v = new Vector3 ();
 		for (int x = -320; x <= 320; x += 32) {
 			v.x = x;
-			//v.y = -192;
-			//Instantiate (BlockTr, v, transform.rotation);  
+			v.y = -192;
+			Instantiate (BlockTr, v, transform.rotation);  
 			v.y = 192;
 			Instantiate (BlockTr, v, transform.rotation);  
 		}
@@ -53,6 +47,6 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	void CreateGameFieldStage() {
-
+		
 	}
 }
